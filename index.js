@@ -69,7 +69,7 @@ app.put('/api/user/:username/progress', async (req, res) => {
       discipline_score,
       completed_modules,
     };
-    await user.save();
+    await user.save();                                                                                                                                    
 
     res.json(user);
   } catch (error) {
@@ -78,5 +78,5 @@ app.put('/api/user/:username/progress', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`🚀 Mental Forge backend operativo en el puerto ${PORT}`);
 });
