@@ -75,8 +75,12 @@ app.put('/api/user/:username/progress', async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: 'Error actualizando progreso' });
   }
-});
 
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 10000;
+
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Mental Forge backend operativo en el puerto ${PORT}`);
 });
+});
+
+
